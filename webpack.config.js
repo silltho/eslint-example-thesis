@@ -1,4 +1,4 @@
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 const entry = './index.js'
 
@@ -15,9 +15,7 @@ const defaultConfig = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: [
-            ['es2015']
-          ]
+          presets: [['es2015']]
         }
       }
     ]
@@ -31,25 +29,21 @@ const defaultMinifiedConfig = {
     filename: 'dist/default/bundle.min.js'
   },
   module: {
-      rules: [
-          {
-              test: /\.js$/,
-              exclude: /node_modules/,
-              loader: 'babel-loader',
-              query: {
-                  presets: [
-                      ['es2015']
-                  ]
-              }
-          }
-      ]
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: [['es2015']]
+        }
+      }
+    ]
   },
-  plugins: [
-    new UglifyJSPlugin()
-  ]
+  plugins: [new UglifyJSPlugin()]
 }
 
-const es6ModulesConfig =   {
+const es6ModulesConfig = {
   entry,
   mode: 'development',
   output: {
@@ -62,38 +56,32 @@ const es6ModulesConfig =   {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: [
-            ['es2015', { loose: true, modules: false }]
-          ]
+          presets: [['es2015', { loose: true, modules: false }]]
         }
       }
     ]
   }
 }
 
-const es6ModulesMinifiedConfig =   {
+const es6ModulesMinifiedConfig = {
   entry,
   mode: 'production',
   output: {
     filename: 'dist/es6-modules/bundle.min.js'
   },
   module: {
-      rules: [
-          {
-              test: /\.js$/,
-              exclude: /node_modules/,
-              loader: 'babel-loader',
-              query: {
-                  presets: [
-                      ['es2015', { loose: true, modules: false }]
-                  ]
-              }
-          }
-      ]
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: [['es2015', { loose: true, modules: false }]]
+        }
+      }
+    ]
   },
-  plugins: [
-    new UglifyJSPlugin()
-  ]
+  plugins: [new UglifyJSPlugin()]
 }
 
 module.exports = [
@@ -101,4 +89,4 @@ module.exports = [
   defaultMinifiedConfig,
   es6ModulesConfig,
   es6ModulesMinifiedConfig
-];
+]

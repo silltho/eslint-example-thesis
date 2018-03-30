@@ -1,8 +1,8 @@
 export function hello() {
-  return 'hello';
+  return 'hello'
 }
 export function world() {
-  return 'world';
+  return 'world'
 }
 
 export default {

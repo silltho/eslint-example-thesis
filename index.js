@@ -1,4 +1,4 @@
-import * as test from './helpers';
+import * as test from './helpers'
 
-let elem = document.getElementById('output');
-elem.innerHTML = `Output: ${test.hello()}`;
+let elem = document.getElementById('output')
+elem.innerHTML = `Output: ${test.hello()}`
