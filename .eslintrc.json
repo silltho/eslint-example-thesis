@@ -1,0 +1,15 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "plugins": [
+        "silltho"
+    ],
+    "rules": {
+        "silltho/no-namespace-imports": "error"
+    }
+}
