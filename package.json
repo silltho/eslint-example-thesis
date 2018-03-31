@@ -1,5 +1,5 @@
 {
-  "name": "thesis-eslint-test",
+  "name": "eslint-example-thesis",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,19 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/silltho/thesis-eslint-test.git"
+    "url": "git+https://github.com/silltho/eslint-example-thesis.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/silltho/thesis-eslint-test/issues"
+    "url": "https://github.com/silltho/eslint-example-thesis/issues"
   },
-  "homepage": "https://github.com/silltho/thesis-eslint-test#readme",
+  "homepage": "https://github.com/silltho/eslint-example-thesis#readme",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-loader": "^7.1.4",
     "eslint": "^4.19.1",
-    "eslint-plugin-silltho": "git+https://github.com/silltho/eslint-lab.git",
+    "eslint-plugin-thesis": "git+https://github.com/silltho/eslint-plugin-thesis.git",
     "lodash": "^4.17.5",
     "uglifyjs-webpack-plugin": "^1.2.2",
     "webpack": "^4.1.0",
