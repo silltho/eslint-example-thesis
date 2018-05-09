@@ -1,0 +1,13 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "plugins": ["thesis"],
+  "rules": {
+    "thesis/no-namespace-imports": "error"
+  }
+}

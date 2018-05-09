@@ -24,7 +24,21 @@ const defaultConfig = {
 }
 
 const defaultMinifiedConfig = {
-  ...defaultConfig,
+  entry,
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: [
+            ['es2015']
+          ]
+        }
+      }
+    ]
+  },
   output: {
     filename: 'dist/default/bundle.min.js'
   },
@@ -55,9 +69,23 @@ const es6ModulesConfig =   {
 }
 
 const es6ModulesMinifiedConfig =   {
-  ...es6ModulesConfig,
+  entry,
   output: {
     filename: 'dist/es6-modules/bundle.min.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: [
+            ['es2015', { loose: true, modules: false }]
+          ]
+        }
+      }
+    ]
   },
   plugins: [
     new UglifyJSPlugin()

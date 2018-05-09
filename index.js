@@ -1,4 +1,3 @@
-import {hello} from './helpers';
+import { a, b } from 'test-libary'
 
-let elem = document.getElementById('output');
-elem.innerHTML = `Output: ${hello()}`;
+console.log(`a: ${a}, b: ${b}`)
