@@ -3,6 +3,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const entry = './index.js'
 
 const defaultConfig = {
+  mode: 'development',
   entry,
   output: {
     filename: 'dist/default/bundle.js'
@@ -24,6 +25,7 @@ const defaultConfig = {
 }
 
 const defaultMinifiedConfig = {
+  mode: 'production',
   entry,
   module: {
     rules: [
@@ -48,6 +50,7 @@ const defaultMinifiedConfig = {
 }
 
 const es6ModulesConfig =   {
+  mode: 'development',
   entry,
   output: {
     filename: 'dist/es6-modules/bundle.js'
@@ -69,6 +72,7 @@ const es6ModulesConfig =   {
 }
 
 const es6ModulesMinifiedConfig =   {
+  mode: 'production',
   entry,
   output: {
     filename: 'dist/es6-modules/bundle.min.js'

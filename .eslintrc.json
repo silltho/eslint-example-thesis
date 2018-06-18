@@ -8,6 +8,6 @@
   },
   "plugins": ["thesis"],
   "rules": {
-    "thesis/no-namespace-imports": "error"
+    "thesis/no-sideeffects": [1]
   }
 }
